@@ -283,7 +283,7 @@ body {
 
 /* ABOUT ME */
 .aboutMe {
-  background-image: url(public/assets/images/aboutMe/aboutMeBackground.png);
+  background-image: url(./assets/images/aboutMe/aboutMeBackground.png);
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -358,7 +358,7 @@ body {
   flex-direction: column;
   gap: 64px;
   padding: 64px 0px;
-  background-image: url(public/assets/images/mySkills/skillsBackground.png);
+  background-image: url(./assets/images/mySkills/skillsBackground.png);
 }
 
 .allSectionTitle {
@@ -510,7 +510,7 @@ body {
 
 /* MY WORKS */
 .MyWorks {
-  background-image: url(public/assets/images/myWorks/myWorksBackground.png);
+  background-image: url(./assets/images/myWorks/myWorksBackground.png);
   padding: 64px 0PX 32px 0px;
   display: flex;
   flex-direction: column;

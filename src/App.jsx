@@ -62,9 +62,9 @@ function Header({ showProjects, setShowProjects }) {
       </ul>
 
       <ul className='headerSocials'>
-        <li><a target="_blank" href="https://www.instagram.com/luchhass/"><img src="public/assets/images/header/instagramHeader.png" alt="" /></a></li>
-        <li><a target="_blank" href="http://discordapp.com/users/_luchhass"><img src="public/assets/images/header/discordHeader.png" alt="" /></a></li>
-        <li><a target="_blank" href="https://github.com/FurkanCosar00"><img src="public/assets/images/header/githubHeader.png" alt="" /></a></li>
+        <li><a target="_blank" href="https://www.instagram.com/luchhass/"><img src="./assets/images/header/instagramHeader.png" alt="" /></a></li>
+        <li><a target="_blank" href="http://discordapp.com/users/_luchhass"><img src="./assets/images/header/discordHeader.png" alt="" /></a></li>
+        <li><a target="_blank" href="https://github.com/FurkanCosar00"><img src="./assets/images/header/githubHeader.png" alt="" /></a></li>
       </ul>
     </header>
   )
@@ -77,7 +77,7 @@ function PageBannerSection() {
 
       <div className="developerInformationCard">
         <div className="myProfile">
-          <img src="public/assets/images/pageBanner/profilePicture.png" alt="" />
+          <img src="./assets/images/pageBanner/profilePicture.png" alt="" />
           <div className="profileTexts">
             <h3>Furkan</h3>
             <p>Frontend developer</p>
@@ -86,10 +86,10 @@ function PageBannerSection() {
       
         <div className="cardSectionTexts">
           <ul className="myInformations">
-            <li><img src="public/assets/images/pageBanner/mail.png" alt="" />furkancosar2005@gmail.com</li>
-            <li><img src="public/assets/images/pageBanner/map.png" alt="" />Turkey</li>
-            <li><img src="public/assets/images/pageBanner/briefcase.png" alt="" />Full-time / Freelancer</li>
-            <li><img src="public/assets/images/pageBanner/link.png" alt="" />www.furkancosar.com.tr</li>
+            <li><img src="./assets/images/pageBanner/mail.png" alt="" />furkancosar2005@gmail.com</li>
+            <li><img src="./assets/images/pageBanner/map.png" alt="" />Turkey</li>
+            <li><img src="./assets/images/pageBanner/briefcase.png" alt="" />Full-time / Freelancer</li>
+            <li><img src="./assets/images/pageBanner/link.png" alt="" />www.furkancosar.com.tr</li>
           </ul>
 
           <ul className="languages">
@@ -100,7 +100,7 @@ function PageBannerSection() {
           </ul>
         </div>
 
-        <button>Download CV <img src="public/assets/images/pageBanner/downloadLogo.png" alt="" /></button>
+        <button>Download CV <img src="./assets/images/pageBanner/downloadLogo.png" alt="" /></button>
       </div>
 
       <div className="desktopResponsive">
@@ -117,7 +117,7 @@ function PageBannerSection() {
             <span>&lt;/p&gt;</span>
           </div>
 
-        <h1 className='letsTalkText'>let’s talk <img src="public/assets/images/pageBanner/LetsTalk.png" alt="" /></h1>
+        <h1 className='letsTalkText'>let’s talk <img src="./assets/images/pageBanner/LetsTalk.png" alt="" /></h1>
         </div>
 
         <div className="yearsOfExperience">
@@ -191,13 +191,13 @@ function MySkills() {
 
       <div className="developmentCards">
         <div className="devCard">
-          <img src="public/assets/images/mySkills/developmentCardDesktop.png" alt="" />
+          <img src="./assets/images/mySkills/developmentCardDesktop.png" alt="" />
           <h3>web developement</h3>
           <p>HTML·CSS·JS·REACT</p>
         </div>
 
         <div className="devCard">
-          <img src="public/assets/images/mySkills/developmentCardMobile.png" alt="" />
+          <img src="./assets/images/mySkills/developmentCardMobile.png" alt="" />
           <h3>web developement</h3>
           <p>HTML·CSS·JS·REACT</p>
         </div>
@@ -205,22 +205,22 @@ function MySkills() {
 
       <div className="ProgrammingLanguages">
         <div className="language">
-          <img src="public/assets/images/mySkills/htmlLogo.png" alt="" />
+          <img src="./assets/images/mySkills/htmlLogo.png" alt="" />
           <p>HTML</p>
         </div>
 
         <div className="language">
-          <img src="public/assets/images/mySkills/cssLogo.png" alt="" />
+          <img src="./assets/images/mySkills/cssLogo.png" alt="" />
           <p>CSS</p>
         </div>
 
         <div className="language">
-          <img src="public/assets/images/mySkills/jsLogo.png" alt="" />
+          <img src="./assets/images/mySkills/jsLogo.png" alt="" />
           <p>JS</p>
         </div>
 
         <div className="language">
-          <img src="public/assets/images/mySkills/reactLogo.png" alt="" />
+          <img src="./assets/images/mySkills/reactLogo.png" alt="" />
           <p>REACT</p>
         </div>
       </div>
@@ -239,10 +239,10 @@ function MyWorks() {
       <div className="MyWorksLink">
         <div className="viewProjectsLink">
           <a href="">View Projects</a>
-          <img src="public/assets/images/myWorks/pointerLogo.png" alt="" />
+          <img src="./assets/images/myWorks/pointerLogo.png" alt="" />
         </div>
 
-        <img src="public/assets/images/myWorks/myWorksContent.png" alt="" />
+        <img src="./assets/images/myWorks/myWorksContent.png" alt="" />
       </div>
     </div>
   )
@@ -263,7 +263,7 @@ function ContactUs() {
         <label>Your email * <input type="text" name='yourEmail' placeholder='Enter your email'/></label>
         <label>Your message * <input type="text" name='yourMessage' placeholder='Enter your needs'/></label>
 
-        <button>Send Message <img src="public/assets/images/contactUs/sendMessage.png" alt="" /></button>
+        <button>Send Message <img src="./assets/images/contactUs/sendMessage.png" alt="" /></button>
       </form>
     </div>
   )
@@ -274,9 +274,9 @@ function Footer() {
     <footer className="footer">
 
       <ul className='footerSocials'>
-        <li><a target="_blank" href="https://www.instagram.com/luchhass/"><img src="public/assets/images/footer/InstagramFooter.png" alt="" /></a></li>
-        <li><a target="_blank" href="http://discordapp.com/users/_luchhass"><img src="public/assets/images/footer/DiscordLogo.png" alt="" /></a></li>
-        <li><a target="_blank" href="https://github.com/FurkanCosar00"><img src="public/assets/images/footer/GithubFooter.png" alt="" /></a></li>
+        <li><a target="_blank" href="https://www.instagram.com/luchhass/"><img src="./assets/images/footer/InstagramFooter.png" alt="" /></a></li>
+        <li><a target="_blank" href="http://discordapp.com/users/_luchhass"><img src="./assets/images/footer/DiscordLogo.png" alt="" /></a></li>
+        <li><a target="_blank" href="https://github.com/FurkanCosar00"><img src="./assets/images/footer/GithubFooter.png" alt="" /></a></li>
       </ul>
 
       <ul className='footerTexts'>

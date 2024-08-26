@@ -7,7 +7,6 @@ function App() {
   return (
     <>
       <Header showProjects={showProjects} setShowProjects={setShowProjects} />
-
       <div className="Page" style={{ display: showProjects ? 'none' : 'block' }}>
         <PageBannerSection />
         <AboutMe />
@@ -15,11 +14,9 @@ function App() {
         <MyWorks />
         <ContactUs />
       </div>
-
       <div className="projects" style={{ display: showProjects ? 'block' : 'none' }}>
         <Projects />
       </div>
-
       <Footer />
     </>
   )
@@ -37,27 +34,15 @@ function Header({ showProjects, setShowProjects }) {
 
   return (
     <header className="header">
-      <h1>
-        <span> &lt;C/&gt; </span>
-        FurkanCosar
-      </h1>
+      <h1><span> &lt;C/&gt; </span>FurkanCosar</h1>
 
       <ul className='pageSections'>
         <li>
-          <button 
-            onClick={showPage} 
-            className={!showProjects ? 'active' : ''}
-          >
-            Page
-          </button>
+          <button onClick={showPage} className={!showProjects ? 'active' : ''}>Page</button>
         </li>
+
         <li>
-          <button 
-            onClick={showProjectsSection} 
-            className={showProjects ? 'active' : ''}
-          >
-            Projects
-          </button>
+          <button onClick={showProjectsSection} className={showProjects ? 'active' : ''}>Projects</button>
         </li>
       </ul>
 
@@ -291,68 +276,191 @@ function Footer() {
 }
 
 function Projects() {
-  return(
+  const [filter, setFilter] = useState('all');
+
+  const handleFilterChange = (filterType) => {
+    setFilter(filterType);
+  };
+
+  const projects = [
+    {
+      id: 21,
+      title: 'Lnading Page',
+      category: 'designs',
+      imgSrc: './assets/images/screenshots/landing-page.png',
+      buttonLink: 'https://furkancosar-landingpage.netlify.app',
+    },
+    {
+      id: 20,
+      title: 'My Portfolio',
+      category: 'designs',
+      imgSrc: './assets/images/screenshots/my-portfolio.png',
+      buttonLink: 'https://furkancosar-portfolio.netlify.app',
+    },
+    {
+      id: 19,
+      title: 'Help Support',
+      category: 'designs',
+      imgSrc: './assets/images/screenshots/help-support.png',
+      buttonLink: 'https://furkancosar-helpsupport.netlify.app',
+    },
+    {
+      id: 18,
+      title: 'Designo',
+      category: 'designs',
+      imgSrc: './assets/images/screenshots/designo.png',
+      buttonLink: 'https://furkancosar-designo.netlify.app',
+    },
+    {
+      id: 17,
+      title: 'Single Page',
+      category: 'designs',
+      imgSrc: './assets/images/screenshots/single-page-design.png',
+      buttonLink: 'https://furkancosar-singlepage.netlify.app',
+    },
+    {
+      id: 16,
+      title: 'Dine',
+      category: 'designs',
+      imgSrc: './assets/images/screenshots/dine-restaurant.png',
+      buttonLink: 'https://furkancosar-dine.netlify.app',
+    },
+    {
+      id: 15,
+      title: 'Blog Page',
+      category: 'designs',
+      imgSrc: './assets/images/screenshots/blog-page-lookscout.png',
+      buttonLink: 'https://furkancosar-bloglookscout.netlify.app',
+    },
+    {
+      id: 14,
+      title: 'Audiphile',
+      category: 'designs',
+      imgSrc: './assets/images/screenshots/audiophile.png',
+      buttonLink: 'https://furkancosar-audiophile.netlify.app',
+    },
+    {
+      id: 13,
+      title: 'Ecommerce',
+      category: 'designs',
+      imgSrc: './assets/images/screenshots/ecommerce.png',
+      buttonLink: 'https://furkancosar-ecommerce.netlify.app',
+    },
+    {
+      id: 12,
+      title: 'Shop Your Way',
+      category: 'designs',
+      imgSrc: './assets/images/screenshots/shop-your-way.png',
+      buttonLink: 'https://furkancosar-shopyourway.netlify.app',
+    },
+    {
+      id: 11,
+      title: 'Order Summary',
+      category: 'designs',
+      imgSrc: './assets/images/screenshots/order-summary.png',
+      buttonLink: 'https://furkancosar-ordersummary.netlify.app',
+    },
+    {
+      id: 10,
+      title: 'Muze',
+      category: 'designs',
+      imgSrc: './assets/images/screenshots/muze.png',
+      buttonLink: 'https://furkancosar-muze.netlify.app',
+    },
+    {
+      id: 9,
+      title: 'Foundations',
+      category: 'designs',
+      imgSrc: './assets/images/screenshots/html-css-foundations.png',
+      buttonLink: 'https://furkancosar-foundations.netlify.app',
+    },
+    {
+      id: 8,
+      title: 'Furniture',
+      category: 'designs',
+      imgSrc: './assets/images/screenshots/furniture.png',
+      buttonLink: 'https://furkancosar-furniture.netlify.app.app',
+    },
+    {
+      id: 7,
+      title: 'Feeling Lost',
+      category: 'designs',
+      imgSrc: './assets/images/screenshots/feeling-lost.png',
+      buttonLink: 'https://furkancosar-feelinglost.netlify.app',
+    },
+    {
+      id: 6,
+      title: 'Accordion',
+      category: 'designs',
+      imgSrc: './assets/images/screenshots/faq-accordion.png',
+      buttonLink: 'https://furkancosar-faqacordion.netlify.app',
+    },
+    {
+      id: 5,
+      title: 'Dashboard',
+      category: 'designs',
+      imgSrc: './assets/images/screenshots/fabrx-admin-dashboard.png',
+      buttonLink: 'https://furkancosar-fabrxadmin.netlify.app',
+    },
+    {
+      id: 4,
+      title: 'Collabration',
+      category: 'designs',
+      imgSrc: './assets/images/screenshots/collabration-made-easy.png',
+      buttonLink: 'https://furkancosar-madeeasy.netlify.app',
+    },
+    {
+      id: 3,
+      title: 'Blog Page',
+      category: 'designs',
+      imgSrc: './assets/images/screenshots/blog-page.png',
+      buttonLink: 'https://furkancosar-blogpage.netlify.app',
+    },
+    {
+      id: 2,
+      title: 'Biggy Burger',
+      category: 'designs',
+      imgSrc: './assets/images/screenshots/biggy-burger.png',
+      buttonLink: 'https://furkancosar-biggyburger.netlify.app',
+    },
+    {
+      id: 1,
+      title: 'Amarachi',
+      category: 'designs',
+      imgSrc: './assets/images/screenshots/amarachi-nkechi.png',
+      buttonLink: 'https://furkancosaramarachinkechi.netlify.app',
+    }
+  ];
+
+  const filteredProjects = projects.filter((project) => {
+    if (filter === 'all') {
+      return true;
+    }
+    return project.category === filter;
+  });
+
+  return (
     <>
       <div className="projectsSection">
         <div className="projectSectionTexts">
           <h1>Projects</h1>
 
-          <ul className='filterTags'>
-            <li><button>All</button></li>
-            <li><button>Reactive</button></li>
-            <li><button>Designs</button></li>
+          <ul className="filterTags">
+            <li><button onClick={() => handleFilterChange('all')} className={filter === 'all' ? 'active' : ''}>All</button></li>
+            <li><button onClick={() => handleFilterChange('reactive')} className={filter === 'reactive' ? 'active' : ''}>Reactive</button></li>
+            <li><button onClick={() => handleFilterChange('designs')} className={filter === 'designs' ? 'active' : ''}>Designs</button></li>
           </ul>
         </div>
 
-        <div className="allProjects"> 
-          <div class="ProjectsItem">
-            <img src="https://images.unsplash.com/photo-1488628075628-e876f502d67a?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=" alt="" />
-            <p class="title">card title</p>
-            <div class="overlay"></div>
-            <div class="button"><a href="#"> BUTTON </a></div>
-          </div>
-
-          <div class="ProjectsItem">
-            <img src="https://images.unsplash.com/photo-1488628075628-e876f502d67a?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=" alt="" />
-            <p class="title">card title</p>
-            <div class="overlay"></div>
-            <div class="button"><a href="#"> BUTTON </a></div>
-          </div>
-
-          <div class="ProjectsItem">
-            <img src="https://images.unsplash.com/photo-1488628075628-e876f502d67a?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=" alt="" />
-            <p class="title">card title</p>
-            <div class="overlay"></div>
-            <div class="button"><a href="#"> BUTTON </a></div>
-          </div>
-
-          <div class="ProjectsItem">
-            <img src="https://images.unsplash.com/photo-1488628075628-e876f502d67a?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=" alt="" />
-            <p class="title">card title</p>
-            <div class="overlay"></div>
-            <div class="button"><a href="#"> BUTTON </a></div>
-          </div>
-
-          <div class="ProjectsItem">
-            <img src="https://images.unsplash.com/photo-1488628075628-e876f502d67a?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=" alt="" />
-            <p class="title">card title</p>
-            <div class="overlay"></div>
-            <div class="button"><a href="#"> BUTTON </a></div>
-          </div>
-
-          <div class="ProjectsItem">
-            <img src="https://images.unsplash.com/photo-1488628075628-e876f502d67a?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=" alt="" />
-            <p class="title">card title</p>
-            <div class="overlay"></div>
-            <div class="button"><a href="#"> BUTTON </a></div>
-          </div>
-
-          <div class="ProjectsItem">
-            <img src="https://images.unsplash.com/photo-1488628075628-e876f502d67a?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=" alt="" />
-            <p class="title">card title</p>
-            <div class="overlay"></div>
-            <div class="button"><a href="#"> BUTTON </a></div>
-          </div>
+        <div className="allProjects">
+          {filteredProjects.map((project) => (
+            <div key={project.id} className={`ProjectsItem ${project.category}`}>
+              <img src={project.imgSrc} alt={project.title} />
+              <p className="title">{project.title}</p>
+              <div className="overlay"></div>
+              <div className="button"><a target="_blank" href={project.buttonLink}>Siteye Git</a></div>
+            </div>
+          ))}
         </div>
       </div>
     </>

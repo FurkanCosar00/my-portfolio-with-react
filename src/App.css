@@ -803,6 +803,10 @@ body {
   opacity: 1;
 }
 
+.filterTags button.active {
+  border-bottom: 2px solid #12F7D6;
+}
+
 @media(width >= 768px) {
   /* HEADER */
   .header {

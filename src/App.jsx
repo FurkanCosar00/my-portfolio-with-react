@@ -7,6 +7,7 @@ function App() {
   return (
     <>
       <Header showProjects={showProjects} setShowProjects={setShowProjects} />
+
       <div className="Page" style={{ display: showProjects ? 'none' : 'block' }}>
         <PageBannerSection />
         <AboutMe />
@@ -14,9 +15,11 @@ function App() {
         <MyWorks />
         <ContactUs />
       </div>
+
       <div className="projects" style={{ display: showProjects ? 'block' : 'none' }}>
         <Projects />
       </div>
+
       <Footer />
     </>
   )
@@ -284,6 +287,97 @@ function Projects() {
 
   const projects = [
     {
+      id: 34,
+      title: 'Job Listing',
+      category: 'reactive',
+      imgSrc: './assets/images/screenshots/job-listing.png',
+      buttonLink: 'https://furkancosar-joblisting.netlify.app',
+    },
+    {
+      id: 33,
+      title: 'Desserts',
+      category: 'reactive',
+      imgSrc: './assets/images/screenshots/desserts.png',
+      buttonLink: 'https://furkancosar-productwishlist.netlify.app',
+    },
+    {
+      id: 32,
+      title: 'Mortgage',
+      category: 'reactive',
+      imgSrc: './assets/images/screenshots/mortgage-calc.png',
+      buttonLink: 'https://furkancosar-mortgagecalculator.netlify.app',
+    },
+    {
+      id: 31,
+      title: 'Qulak Case',
+      category: 'reactive',
+      imgSrc: './assets/images/screenshots/qulak-case.png',
+      buttonLink: 'https://qulakcaseadmindashboard.netlify.app',
+    },
+    {
+      id: 30,
+      title: 'Tic Tac Toe',
+      category: 'reactive',
+      imgSrc: './assets/images/screenshots/tic-tac-toe.png',
+      buttonLink: 'https://furkancosartictactoe.netlify.app',
+    },
+    {
+      id: 29,
+      title: 'Pricing',
+      category: 'reactive',
+      imgSrc: './assets/images/screenshots/pricing-system.png',
+      buttonLink: 'https://furkancosar-pricing.netlify.app',
+    },
+    {
+      id: 28,
+      title: 'Countries',
+      category: 'reactive',
+      imgSrc: './assets/images/screenshots/rest-countries.png',
+      buttonLink: 'https://furkancosar-restcountries.netlify.app',
+    },
+    {
+      id: 27,
+      title: 'Contact Form',
+      category: 'reactive',
+      imgSrc: './assets/images/screenshots/contact-form.png',
+      buttonLink: 'https://furkancosar-contactform.netlify.app',
+    },
+    {
+      id: 26,
+      title: 'RPM',
+      category: 'reactive',
+      imgSrc: './assets/images/screenshots/rock-paper-scissors.png',
+      buttonLink: 'https://furkancosar-rpm.netlify.app',
+    },
+    {
+      id: 25,
+      title: 'Advice',
+      category: 'reactive',
+      imgSrc: './assets/images/screenshots/advice-generator.png',
+      buttonLink: 'https://furkancosar-advice.netlify.app',
+    },
+    {
+      id: 24,
+      title: 'Age Calculator',
+      category: 'reactive',
+      imgSrc: './assets/images/screenshots/age-calculator.png',
+      buttonLink: 'https://furkancosar-agecalc.netlify.app',
+    },
+    {
+      id: 23,
+      title: 'Tip Calculator',
+      category: 'reactive',
+      imgSrc: './assets/images/screenshots/tip-calculator.png',
+      buttonLink: 'https://furkancosar-tipcalculator.netlify.app',
+    },
+    {
+      id: 22,
+      title: 'Calculator',
+      category: 'reactive',
+      imgSrc: './assets/images/screenshots/calculator-blue.png',
+      buttonLink: 'https://furkancosar-calculator.netlify.app',
+    },
+    {
       id: 21,
       title: 'Lnading Page',
       category: 'designs',
@@ -429,6 +523,13 @@ function Projects() {
       category: 'designs',
       imgSrc: './assets/images/screenshots/amarachi-nkechi.png',
       buttonLink: 'https://furkancosaramarachinkechi.netlify.app',
+    },
+    {
+      id: 31,
+      title: 'Devjobs',
+      category: 'designs',
+      imgSrc: './assets/images/screenshots/devjobs.png',
+      buttonLink: 'https://furkancosar-devjobs.netlify.app',
     }
   ];
 
